@@ -1,7 +1,7 @@
 include .env
 
 install:
-	docker-compose exec php ../vendor/bin/drush site-install idea \
+	docker-compose exec -T php ../vendor/bin/drush site-install idea \
 		--local=en \
 		--account-name=$(ACCOUNT_NAME) \
 		--account-mail=$(ACCOUNT_EMAIL) \
