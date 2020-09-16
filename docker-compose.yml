@@ -12,6 +12,8 @@ services:
       MYSQL_PASSWORD: $DB_PASSWORD
     volumes:
       - ./mariadb-init:/docker-entrypoint-initdb.d # Place init .sql file(s) here.
+    ports:
+      - 3306:3306
 
   php:
     image: wodby/drupal-php:$PHP_TAG
